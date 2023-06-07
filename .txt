@@ -1,0 +1,20 @@
+
+{ data?
+  data.map((element)=>{
+    return(
+      
+          <div class="card d-inline-flex mx-3 " key={element.data.id} style={{width: '',marginTop: '2rem',height: '22rem',border: '2px solid black',borderColor: ' red rgb(240, 30, 50, 0.7) green'}}>
+    <img src= {element.data.albumOfTrack.coverArt.sources[0].url} class="card-img-top" alt="..." style={{minWidth: '0.5rem'}}/>
+    <div class="card-body" style={{backgroundColor: 'black',color: 'white', fontFamily:'fantasy'}}>
+      <h5 class="card-title">{element.data.albumOfTrack.name}</h5>
+      
+      <a href= {element.data.albumOfTrack.sharingInfo.shareUrl} target = '__new'class="btn btn-warning " >Play</a>
+    </div>
+  </div>
+         
+        
+      
+  
+    )
+  })
+  : ""}
